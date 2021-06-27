@@ -19,11 +19,14 @@ app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true }))
 
 app.get('/', function (req, res) {
-  res.send('hello world');
+    var arrecadado = 4500;
+    var meta = 6000;
+    var percentualArrecadado = arrecadado/meta * 100;
+    res.send({"arrecadado" : arrecadado, "meta" : meta, "percentualArrecadado" : percentualArrecadado});
 });
 
 app.post('/contribuicao', function (req, res) {
-  console.log(req.body);
+  console.log(req.body.responsavel);
   res.send('hello world');
 });
 
