@@ -13,4 +13,4 @@ app.post('/contribuicao', function (req, res) {
   res.send('hello world');
 });
 
-app.listen(9000);
+module.exports = app;
