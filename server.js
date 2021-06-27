@@ -12,5 +12,3 @@ app.post('/contribuicao', function (req, res) {
   console.log(req.body);
   res.send('hello world');
 });
-
-module.exports = app;
