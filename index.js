@@ -11,6 +11,10 @@ app.get('/portfolio', (req, res) => res.send('Portfolio Page Route'));
 app.get('/contact', (req, res) => res.send('Contact Page Route'));
 */
 
+var cors = require('cors')
+
+app.use(cors())
+
 app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true }))
 
